@@ -1,0 +1,185 @@
+@import "./Variable.scss";
+
+.portfolio {
+  .portfolio__container {
+    padding: 1rem 5%;
+    margin-top: -3rem;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    @media only screen and (max-width: 468px) {
+      margin-top: -5rem;
+    }
+
+    .heading {
+      display: flex;
+      flex-direction: column;
+
+      .text {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        a {
+          font-size: $normal-fs;
+          color: $title-c;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
+        h3 {
+          font-family: $sec-f;
+          letter-spacing: 1.5px;
+        }
+      }
+
+      .title {
+        h1 {
+          font-size: $h1-fs;
+          letter-spacing: 1.2px;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: $normal-fs;
+          letter-spacing: 1px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    .filter__button {
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: transparent;
+      justify-content: space-around;
+      border: 2px solid $primary-c;
+      border-radius: 12px;
+
+      @media only screen and (max-width:468px) {
+        gap: .5rem;
+        padding: 1rem 0;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        color: #fefefe;
+        font-size: $h3-fs;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        border-radius: 12px;
+        transition: all 0.3s ease-in-out;
+        opacity: .5;
+
+        @media only screen and (max-width:468px) {
+          width: 70px;
+          height: 30px;
+        }
+
+        &.active {
+          background-color: $primary-c;
+          opacity: 1;
+          color: $title-c;
+          box-shadow: 0 0 10px $primary-c;
+        }
+      }
+    }
+
+    .portfolio__card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      row-gap: 3rem;
+      margin-top: 2rem;
+
+      @media only screen and (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 468px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+      }
+
+      .card {
+        width: 100%;
+        height: auto;
+        background-color: #fefefe;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid $title-c;
+
+        img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover;
+          transition: .3s ease-in-out;
+          cursor: pointer;
+          overflow: hidden;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .card__title {
+          padding: 1rem;
+
+          h3 {
+            font-size: $h3-fs;
+            letter-spacing: 1px;
+            margin-bottom: .5rem;
+            color: #0e0e0e;
+            font-weight: 500;
+          }
+
+          p {
+            font-size: $normal-fs;
+            letter-spacing: .5px;
+            color: #0e0e0e;
+            margin-bottom: 1rem;
+            font-weight: 300;
+          }
+
+          a {
+            font-size: $normal-fs;
+            color: $body-c;
+            letter-spacing: 1px;
+            font-weight: 300;
+          }
+
+          .icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+
+            span {
+              color: $title-c;
+              width: 30px;
+              height: 30px;
+              background-color: $body-c;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

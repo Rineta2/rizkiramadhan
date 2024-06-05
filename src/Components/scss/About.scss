@@ -1,0 +1,220 @@
+@import "./Variable.scss";
+
+.about {
+  .about__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .about__data {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      place-items: center;
+
+      @media only screen and (max-width: 1024px) {
+        grid-template-columns: 1fr;
+      }
+
+      .about__img {
+        img {
+          width: 400px;
+          height: 400px;
+          object-fit: cover;
+          border-radius: 16px;
+          border: thick double $title-c;
+
+          @media only screen and (max-width: 468px) {
+            width: 300px;
+            height: 300px;
+          }
+        }
+      }
+
+      .about__text {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .profile {
+          font-size: $h2-fs;
+          height: 40px;
+          width: 150px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $primary-c;
+          color: $title-c;
+          font-family: $sec-f;
+          letter-spacing: 2px;
+          font-weight: 600;
+          margin-bottom: 1rem;
+          border-radius: 6px;
+        }
+
+        .name {
+          font-size: $h1-fs;
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+
+        .desc {
+          font-size: $normal-fs;
+          font-weight: 400;
+          letter-spacing: 1px;
+
+          @media only screen and (max-width: 1024px) {
+            max-width: 500px;
+            margin-bottom: 1rem;
+          }
+
+          @media only screen and (max-width: 768px) {
+            max-width: 350px;
+          }
+
+          @media only screen and (max-width: 468px) {
+            max-width: 300px;
+          }
+        }
+
+        .background {
+          text-align: center;
+          height: 40px;
+          width: 200px;
+          background: $primary-c;
+          font-size: $h3-fs;
+          font-weight: 600;
+          font-family: $sec-f;
+          letter-spacing: 2px;
+          margin-bottom: 1.5rem;
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .my__background {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1.5rem;
+
+          @media only screen and (max-width: 468px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.3rem;
+          }
+
+          @media only screen and (max-width: 320px) {
+            grid-template-columns: 1fr;
+            row-gap: 1.5rem;
+          }
+
+          .box {
+            width: 200px;
+            height: 140px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+            border: thick double $title-c;
+
+            @media only screen and (max-width: 468px) {
+              width: 150px;
+            }
+
+            @media only screen and (max-width: 320px) {
+              width: 250px;
+            }
+
+            &:hover {
+              transform: scale(1.1);
+            }
+
+            .icons {
+              font-size: $h3-fs;
+              margin-bottom: 0.5rem;
+            }
+
+            .school {
+              font-size: $normal-fs;
+              margin-bottom: 0.5rem;
+            }
+
+            .year {
+              font-size: $h3-fs;
+              margin-bottom: 0.5rem;
+            }
+
+            .kejuruan {
+              font-size: $normal-fs;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.skills {
+  .skills__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      font-size: $h1-fs;
+      letter-spacing: 2px;
+
+      span {
+        color: $primary-c;
+      }
+    }
+
+    .my__skills {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1.5rem;
+
+      @media only screen and (max-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-c;
+        width: 50px;
+        height: 50px;
+        padding: 1rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s;
+        position: relative;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        .icon {
+          font-size: $h1-fs;
+          display: flex;
+        }
+      }
+    }
+  }
+}

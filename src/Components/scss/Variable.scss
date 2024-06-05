@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Margarine&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$body-f: "Poppins", sans-serif;
+$sec-f: "Margarine", cursive;
+
+$body-c: #00224d;
+$title-c: #f6f6f6;
+$primary-c: #fc2947;
+
+$h1-fs: 1.8rem;
+$h2-fs: 1.5rem;
+$h3-fs: 1.3rem;
+$normal-fs: 0.913rem;
+
+$hh: 3.5rem;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: $body-c;
+  color: $title-c;
+  font-family: $body-f;
+}
+
+section {
+  padding: 7rem 2rem;
+
+  @media only screen and (max-width: 468px) {
+    padding: 4rem 2rem;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 80%;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 70%;
+  }
+
+  @media only screen and (max-width: 468px) {
+    font-size: 62.8%;
+  }
+}
+
+main {
+  overflow: hidden;
+}
